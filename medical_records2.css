@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4fa; /* light lavender background */
+    color: #4b267b;
+    margin: 0;
+    padding: 2rem;
+    padding-bottom: 4rem; /* Prevent content hiding behind footer */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: nowrap;
+}
+
+
+
+.medical-list-container {
+    width: 100%;
+    height: 87vh;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 16px;
+    background: #ffffff; /* white card background */
+    box-shadow: 0 6px 20px rgba(75, 38, 123, 0.1);
+    justify-content: flex;
+}
+
+.medical-card {
+    background: #f0e6fa url('pawback.png') center center repeat;
+    background-blend-mode: lighten; 
+    background-size: 80px;
+    padding: 1rem;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(75, 38, 123, 0.1);
+    min-width: 250px;
+    flex: 1 1 300px;
+    height: 250px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    color: #4b267b;
+    cursor: pointer;
+}
+
+.medical-card:hover {
+    transform: translateY(-5px);
+    border-left: 6px solid #6e4db8;
+    box-shadow: 0 8px 20px rgba(75, 38, 123, 0.2);
+}
+
+.medical-id {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    color: #4b267b;
+}
+
+.medical-card p {
+    margin: 0.3rem 0;
+}
+
+.medical-card a {
+    color: #6e4db8; /* Darker purple for links */
+    font-weight: bold;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+
+.medical-card a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed #b7a6db;
+    margin: 2rem 0;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #4b267b;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 80%;
+    }
+
+    .medical-list-container {
+        width: 100%;
+       
+    }
+}
+
+footer {
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    opacity: 100%;
+    color: #999;
+    background-color: transparent;
+    z-index: 10;
+}
+
